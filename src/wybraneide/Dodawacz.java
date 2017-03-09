@@ -6,7 +6,6 @@ public class Dodawacz extends javax.swing.JFrame {
     public Dodawacz() {
         initComponents();
     }
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -157,11 +156,26 @@ public class Dodawacz extends javax.swing.JFrame {
     }//GEN-LAST:event_AddRightActionPerformed
 
     private void ExecuteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExecuteActionPerformed
-        // TODO add your handling code here:
+        
+        double d = Double.parseDouble(AddLeft.getText());
+        double e = Double.parseDouble(AddRight.getText());
+        
+        //double f = Double.parseDouble(SunstrLeft.getText());
+        //double g = Double.parseDouble(SubstrRight.getText());
+        
+        Mathematic dd = new Mathematic();
+        
+        
+        ScoreDisplay.setText(Double.toString(dd.dodaj(d, e)));
+        //ScoreDisplay.setText(Double.toString(dd.odejmij(f, g)));
+                
+                
+                
+                
     }//GEN-LAST:event_ExecuteActionPerformed
 
     private void AddLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddLeftActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_AddLeftActionPerformed
 
     public static void main(String args[]) {
