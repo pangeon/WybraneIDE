@@ -156,22 +156,84 @@ public class Dodawacz extends javax.swing.JFrame {
     }//GEN-LAST:event_AddRightActionPerformed
 
     private void ExecuteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExecuteActionPerformed
-        
-        double d = Double.parseDouble(AddLeft.getText());
-        double e = Double.parseDouble(AddRight.getText());
-        
-        //double f = Double.parseDouble(SunstrLeft.getText());
-        //double g = Double.parseDouble(SubstrRight.getText());
-        
         Mathematic dd = new Mathematic();
+        double d=0,e=0,f=0,g=0,h=0,i=0,j=0,k=0;
+        try {
+            if(!AddLeft.getText().isEmpty()) {
+                d = Double.parseDouble(AddLeft.getText());
+            }
+            if(!AddRight.getText().isEmpty()) {
+                e = Double.parseDouble(AddRight.getText());
+            }
+             f = Double.parseDouble(SunstrLeft.getText());
+             g = Double.parseDouble(SubstrRight.getText());
+             h = Double.parseDouble(MultLeft.getText());
+             i = Double.parseDouble(MultRight.getText());
+             j = Double.parseDouble(DivLeft.getText());
+             k = Double.parseDouble(DivRight.getText());
+         } catch (NumberFormatException error) {
+             error.toString();
+         }
+         try {
+             if(!SunstrLeft.getText().isEmpty()) {
+                f = Double.parseDouble(SunstrLeft.getText());
+             }
+             if(!SubstrRight.getText().isEmpty()) {
+                g = Double.parseDouble(SubstrRight.getText());
+             }
+             d = Double.parseDouble(AddLeft.getText());
+             e = Double.parseDouble(AddRight.getText());
+             h = Double.parseDouble(MultLeft.getText());
+             i = Double.parseDouble(MultRight.getText());
+             j = Double.parseDouble(DivLeft.getText());
+             k = Double.parseDouble(DivRight.getText());
+         } catch (NumberFormatException error) {
+             error.toString();
+         }
+         try {
+             if(!MultLeft.getText().isEmpty()) {
+                h = Double.parseDouble(MultLeft.getText());
+             }
+             if(!MultRight.getText().isEmpty()) {
+                i = Double.parseDouble(MultRight.getText());
+             }
+             d = Double.parseDouble(AddLeft.getText());
+             e = Double.parseDouble(AddRight.getText());
+             f = Double.parseDouble(SunstrLeft.getText());
+             g = Double.parseDouble(SubstrRight.getText());
+             j = Double.parseDouble(DivLeft.getText());
+             k = Double.parseDouble(DivRight.getText());
+         } catch (NumberFormatException error) {
+             error.toString();
+         }
+         try {
+             if(!DivLeft.getText().isEmpty()) {
+                j = Double.parseDouble(DivLeft.getText());
+             }
+             if(!DivRight.getText().isEmpty()) {
+                k = Double.parseDouble(DivRight.getText());
+             }
+             d = Double.parseDouble(AddLeft.getText());
+             e = Double.parseDouble(AddRight.getText());
+             f = Double.parseDouble(SunstrLeft.getText());
+             g = Double.parseDouble(SubstrRight.getText());
+             h = Double.parseDouble(MultLeft.getText());
+             i = Double.parseDouble(MultRight.getText());
+         } catch (NumberFormatException error) {
+             error.toString();
+         }
         
+        if(!AddLeft.getText().isEmpty() && !AddRight.getText().isEmpty())
+            ScoreDisplay.setText(Double.toString(dd.dodaj(d, e)));
         
-        ScoreDisplay.setText(Double.toString(dd.dodaj(d, e)));
-        //ScoreDisplay.setText(Double.toString(dd.odejmij(f, g)));
-                
-                
-                
-                
+        if(!SunstrLeft.getText().isEmpty() && !SubstrRight.getText().isEmpty())
+           ScoreDisplay.setText(Double.toString(dd.odejmij(f, g)));
+        
+        if(!MultLeft.getText().isEmpty() && !MultRight.getText().isEmpty())
+           ScoreDisplay.setText(Double.toString(dd.pomnoz(h, i)));
+        
+        if(!DivLeft.getText().isEmpty() && !DivRight.getText().isEmpty())
+           ScoreDisplay.setText(Double.toString(dd.podziel(j, k)));
     }//GEN-LAST:event_ExecuteActionPerformed
 
     private void AddLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddLeftActionPerformed
